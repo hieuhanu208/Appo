@@ -11,7 +11,7 @@ var dl =  {
       id: '7c2077f8-7258-43ed-b842-619fa18a9146',
       name: 'Zamit',
       price: 44.926,
-      image: '/img/bg-img/2.jpg'
+      image: '/img/bg-img/3.jpg'
     },
     {
       id: '8e517c84-e57f-46de-8ab6-0a3ba4572935',
