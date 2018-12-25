@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import SubFooter from './components/SubFooter'
 import Footer from './components/Footer'
 import Master from './components/Master'
+import CartProvider from './context/CartProvider'
+
 
 class App extends Component {
   componentDidMount() {
@@ -13,10 +15,13 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/* <Header /> */}
+        <CartProvider >
         <Master />
         <SubFooter />
         <Footer />
+        </CartProvider>
+        {/* <Header /> */}
+        
       </div>
     )
   }

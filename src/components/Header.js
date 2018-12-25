@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { CartContext } from '../context/CartProvider'
 
 export default class Header extends Component {
   render() {
@@ -12,9 +13,7 @@ export default class Header extends Component {
         </div>
         {/* Logo */}
         <div className='logo'>
-         <Link to='/'> <img src='/img/core-img/logo.png' alt="true"  /></Link>
-           
-          
+          <Link to='/'> <img src='/img/core-img/logo.png' alt="true" /></Link>
         </div>
         {/* Amado Nav */}
         <nav className='amado-nav'>
@@ -26,21 +25,20 @@ export default class Header extends Component {
               <Link to='/shop/556ba8ad-660b-434e-b1b3-a25e1d399fae'>Shop</Link>
             </li>
             <li>
-              <Link to='product'>Product</Link>
-            </li>
-            
-            <li>
-            <Link to='checkout'>Checkout</Link>
+              <Link to='checkout'>Checkout</Link>
             </li>
           </ul>
         </nav>
         {/* Cart Menu */}
         <div className='cart-fav-search mb-100'>
-          <Link to='cart' className='cart-nav'>
-            <img src='/img/core-img/cart.png' alt="true"  /> Cart <span>(0)</span>
-          </Link>
+          <CartContext.Consumer>
+            {({ cartItems }) => (<Link to='/cart' className='cart-nav'>
+              <img src='/img/core-img/cart.png' alt="true" /> Cart <span>({cartItems.length})</span>
+            </Link>)}
+          </CartContext.Consumer>
+
           <Link to='/search' className='search-nav'>
-            <img src='/img/core-img/search.png' alt="true"  /> Search
+            <img src='/img/core-img/search.png' alt="true" /> Search
             </Link>
         </div>
         {/* Social Button */}

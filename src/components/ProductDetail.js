@@ -1,19 +1,17 @@
 import React, { Component } from 'react'
 import dl from './data'
 import { Link } from 'react-router-dom'
-
 export default class ProductDetail extends Component {
-  render () {
+  render() {
     const { product_id } = this.props.match.params
 
     const filterProduct = dl.product.filter(items => items.id == product_id)
-    
-    const isEmpty = filterProduct.length == 0 
+
+    const isEmpty = filterProduct.length == 0
 
     if (isEmpty) {
-      return "404 NOT FOUND"
+      return '404 NOT FOUND'
     }
-
 
     const items = filterProduct[0]
 
@@ -78,10 +76,7 @@ export default class ProductDetail extends Component {
                   </ol>
                   <div className='carousel-inner'>
                     <div className='carousel-item active'>
-                      <a
-                        className='gallery_img'
-                        href={items.image[0]}
-                      >
+                      <a className='gallery_img' href={items.image[0]}>
                         <img
                           className='d-block w-100'
                           src={items.image[1]}
@@ -188,14 +183,9 @@ export default class ProductDetail extends Component {
                       </span>
                     </div>
                   </div>
-                  <button
-                    type='submit'
-                    name='addtocart'
-                    value={5}
-                    className='btn amado-btn'
-                  >
-                    Add to cart
-                  </button>
+                  <button  type='submit' name='addtocart' value={5} className='btn amado-btn'>
+                        Add to cart
+                      </button>
                 </form>
               </div>
             </div>

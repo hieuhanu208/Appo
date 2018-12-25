@@ -2,7 +2,7 @@ var dl =  {
   category: [
     {
       id: '556ba8ad-660b-434e-b1b3-a25e1d399fae',
-      name: 'Matsoft',
+      name: 'XXXX',
       price: 55.233,
       image:'/img/bg-img/1.jpg'
       
@@ -99,7 +99,7 @@ var dl =  {
     {
       id: 3,
       name: 'Shirlee',
-      price: 2000,
+      price: 34500,
       status: true,
       description:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quae eveniet culpa officia quidem mollitia impedit iste asperiores nisi reprehenderit consequatur, autem, nostrum pariatur enim?',
@@ -114,7 +114,7 @@ var dl =  {
     {
       id: 4,
       name: 'MacCoughen',
-      price: 2000,
+      price: 12000,
       status: true,
       description:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quae eveniet culpa officia quidem mollitia impedit iste asperiores nisi reprehenderit consequatur, autem, nostrum pariatur enim?',
@@ -129,7 +129,7 @@ var dl =  {
     {
       id: 5,
       name: 'Guntar',
-      price: 2000,
+      price: 1000,
       status: true,
       description:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quae eveniet culpa officia quidem mollitia impedit iste asperiores nisi reprehenderit consequatur, autem, nostrum pariatur enim?',
@@ -139,7 +139,7 @@ var dl =  {
           'http://dummyimage.com/212x248.jpg/dddddd/00000c'
         ],
       image_sub: 'img/bg-img/1.jpg',
-      cate_id: 2
+      cate_id: '8e517c84-e57f-46de-8ab6-0a3ba4572935'
     }
   ]
 }

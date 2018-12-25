@@ -2,12 +2,18 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import dl from './data';
 import { Button } from 'reactstrap';
+import {CartContext} from '../context/CartProvider';
 
 export default class ProductItem extends Component {
   render () {
+   
+    
+    
     return (
+      
 
        dl.product.filter((value,key) => value.cate_id === this.props.category_id).map((value ,key)=> {
+         
         return (
           <div className='col-12 col-sm-4 col-md-12 col-xl-4'  key= {key}>
           <div className='single-product-wrapper' >
@@ -38,14 +44,15 @@ export default class ProductItem extends Component {
                 <i className='fa fa-star' aria-hidden='true' />
               </div>
               <div className='cart'>
-                <Link
-                  to='/shop'
-                  data-toggle='tooltip'
-                  data-placement='left'
-                  title='Add to Cart'
-                >
-                  <Button color="danger">Add to cart!</Button>
-                </Link>
+              <CartContext.Consumer>
+              {({addtoCart}) => 
+                  
+                     <Button color="danger"  onClick={()=> addtoCart(value)}>Add to cart!</Button>
+                   }
+
+                
+              </CartContext.Consumer>
+              
               </div>
             </div>
           </div>
