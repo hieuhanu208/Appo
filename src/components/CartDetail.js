@@ -5,7 +5,14 @@ import ProductItem from './ProductItem'
 export default class CartDetail extends Component {
   render () {
     const { cartItems } = this.props
-    const {count}= this.props
+
+
+    //const cartID = Object.keys(cartItems);
+  //  const total = cartID.reduce((prev, key)=> {  
+  //   const price = this.props.cartItems[key].price;
+  //   const count = this.props.cartItems[key];
+  //   return prev + (price*count) ;
+  //  },0);
    
 
     return (
@@ -37,6 +44,7 @@ export default class CartDetail extends Component {
                       <h5>{cartItems.name}</h5>
                     </td>
                     <td className='price'>
+                     
                       <span>${cartItems.price}</span>
                     </td>
                     <td className='qty'>
@@ -57,7 +65,7 @@ export default class CartDetail extends Component {
                             min={1}
                             max={300}
                             name='quantity'
-                            defaultValue={count}
+                            defaultValue={1}
                           />
                           <span
                             className='qty-plus'

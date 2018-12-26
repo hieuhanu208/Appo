@@ -12,7 +12,7 @@ export default class ShoppingCart extends Component {
             <div className='container-fluid'>
               <div className='row'>
                 <CartSummary />
-                <CartDetail cartItems={cartItems} count={count} />
+                <CartDetail cartItems={cartItems}  />
               </div>
             </div>
           </div>
